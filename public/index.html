@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b16">
+  <meta name="description" content="TicketChain: descubre eventos y obtén boletos digitales verificables.">
+  <title>TicketChain — Vive el momento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">T</span><span>ticket<span class="brand-light">chain</span></span></a>
+    <nav><a href="#eventos">Explorar eventos</a><a href="#como-funciona">Cómo funciona</a></nav>
+    <a class="nav-cta" href="#eventos">Encontrar boletos <span>↗</span></a>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> EL ACCESO A LO EXTRAORDINARIO</div>
+        <h1>Los mejores momentos.<br><span>Boletos auténticos.</span></h1>
+        <p class="hero-text">Descubre experiencias en vivo y compra con la tranquilidad de contar con boletos digitales verificables.</p>
+        <div class="hero-actions"><a class="button primary" href="#eventos">Explorar eventos <span>→</span></a><a class="text-link" href="#como-funciona">Conoce la tecnología <span>↘</span></a></div>
+        <div class="trust-row"><div class="avatars"><i>✦</i><i>♫</i><i>◈</i></div><div><strong>Una nueva forma de entrar</strong><small>Identidad digital · Verificación · Transparencia</small></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="art-glow"></div>
+        <div class="floating-tag tag-top"><span class="tag-dot"></span> Verificación digital</div>
+        <div class="ticket-visual">
+          <div class="ticket-top"><span>TC / LIVE ACCESS</span><span class="ticket-status">● VERIFIED</span></div>
+          <div class="ticket-photo"></div>
+          <div class="ticket-info"><div><small>EXPERIENCIA DESTACADA</small><h3>Feel the<br>frequency.</h3></div><div class="ticket-symbol">✳</div></div>
+          <div class="ticket-perf"></div>
+          <div class="ticket-bottom"><div><small>ACCESO</small><strong>GENERAL / 001</strong></div><div class="fake-qr"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+        </div>
+        <div class="floating-tag tag-bottom"><span class="check-icon">✓</span><div><strong>Autenticidad protegida</strong><small>Verificación preparada para Stellar</small></div></div>
+      </div>
+    </section>
+    <section class="metrics">
+      <div><strong>01</strong><span>Descubre</span></div><div><strong>02</strong><span>Reserva</span></div><div><strong>03</strong><span>Verifica</span></div><div class="metric-note">La experiencia comienza antes del evento.</div>
+    </section>
+    <section class="events-section" id="eventos">
+      <div class="section-heading"><div><div class="eyebrow">ENCUENTRA TU PRÓXIMA HISTORIA</div><h2>Eventos que <span>se viven.</span></h2></div><span class="live-label"><i></i> PRÓXIMOS EVENTOS</span></div>
+      <div id="eventGrid" class="event-grid"><div class="loading-card">Cargando experiencias...</div></div>
+      <p class="section-footnote">Los eventos mostrados son datos de demostración. Las compras de esta versión no procesan pagos reales.</p>
+    </section>
+    <section class="how-section" id="como-funciona">
+      <div class="eyebrow">TECNOLOGÍA CON PROPÓSITO</div><h2>Tu boleto. Tu acceso.<br><span>Una prueba verificable.</span></h2>
+      <div class="steps">
+        <article><div class="step-number">01 / COMPRA</div><div class="step-icon">↗</div><h3>Compra sencilla</h3><p>Elige tu evento y recibe un identificador único asociado a tu orden.</p></article>
+        <article><div class="step-number">02 / INTEGRIDAD</div><div class="step-icon">⌘</div><h3>Huella criptográfica</h3><p>Una huella digital ayuda a detectar alteraciones en la información del boleto.</p></article>
+        <article><div class="step-number">03 / BLOCKCHAIN</div><div class="step-icon">◈</div><h3>Verificación en Stellar</h3><p>La integración Soroban permitirá registrar y consultar el estado del boleto en Testnet.</p></article>
+      </div>
+    </section>
+    <section class="verify-section" id="verificar">
+      <div class="verify-copy"><div class="eyebrow">VALIDACIÓN DIGITAL</div><h2>¿Tu boleto es auténtico?</h2><p>Introduce el código único de tu boleto para consultar su estado y, si está registrado, la referencia de su transacción en Stellar.</p></div>
+      <form id="verifyForm" class="verify-form"><label for="verifyCode">Código del boleto</label><div class="verify-input-row"><input id="verifyCode" required placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"><button class="button primary" type="submit">Verificar <span>→</span></button></div><div id="verifyResult" class="verify-result" aria-live="polite"></div></form>
+    </section>
+    <section class="cta-banner"><div><div class="eyebrow">VIVE ALGO INOLVIDABLE</div><h2>Tu próxima experiencia<br>está a un clic.</h2></div><a class="button primary" href="#eventos">Ver eventos <span>→</span></a></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">T</span><span>ticket<span class="brand-light">chain</span></span></a><span>Proyecto académico · Node.js + MySQL + Stellar</span><span>© 2026 TicketChain</span></footer>
+  <dialog id="buyDialog">
+    <form id="buyForm" class="buy-form">
+      <button type="button" class="dialog-close" id="closeDialog" aria-label="Cerrar">×</button>
+      <div class="eyebrow">ASEGURA TU ACCESO</div><h2 id="dialogTitle">Comprar boletos</h2><p id="dialogDescription" class="muted"></p>
+      <input type="hidden" id="eventId">
+      <label>Nombre completo<input id="buyerName" required maxlength="120" placeholder="Tu nombre"></label>
+      <label>Correo electrónico<input id="buyerEmail" type="email" required maxlength="180" placeholder="tu@correo.com"></label>
+      <label>Cantidad<select id="quantity"><option value="1">1 boleto</option><option value="2">2 boletos</option><option value="3">3 boletos</option><option value="4">4 boletos</option><option value="5">5 boletos</option><option value="6">6 boletos</option><option value="7">7 boletos</option><option value="8">8 boletos</option></select></label>
+      <div class="form-note">Demo académica: no se realizará ningún cobro real.</div>
+      <button class="button primary full" type="submit">Generar boleto de prueba <span>→</span></button>
+      <div id="buyResult" class="buy-result" aria-live="polite"></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
