@@ -2,10 +2,26 @@ const grid = document.getElementById("eventGrid");
 const dialog = document.getElementById("buyDialog");
 const form = document.getElementById("buyForm");
 const result = document.getElementById("buyResult");
-let eventCache = [];
+let eventCache = [
 
-const money = value => new Intl.NumberFormat("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 }).format(Number(value));
-const dateLabel = value => new Intl.DateTimeFormat("es-MX", { dateStyle: "medium", timeStyle: "short" }).format(new Date(value));
+];
+
+const money = value => new Intl.NumberFormat("es-MX", 
+  {
+     style:
+      "currency", currency:
+       "MXN", maximumFractionDigits: 0 
+      }
+    )
+    .format(Number(value));
+const dateLabel =
+ value => new Intl.DateTimeFormat
+ ("es-MX",
+   {
+     dateStyle: 
+     "medium", timeStyle: "short"
+     }
+    ).format(new Date(value));
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, char => ({
