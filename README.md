@@ -96,3 +96,4 @@ La clave de administrador debe tener fondos de Testnet. El backend firma transac
 ## Modelo de datos
 
 `eventos 1—N ordenes 1—N boletos`; cada boleto referencia un evento y contiene código único, hash y estado.
+## Publicare la 27!!!
